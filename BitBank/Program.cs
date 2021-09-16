@@ -33,6 +33,13 @@ namespace BitBank {
 
             camila.Senha = "abc";
             sistemaInterno.Logar(camila, "abc");
+
+            ParceiroComercial leona = new ParceiroComercial() {
+                Nome = "Leona"
+            };
+
+            leona.Senha = "000";
+            sistemaInterno.Logar(leona, "000");
         }
         
         public static void CalculaBonificacao() {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BitBank.Funcionarios {
-    public class Diretor : Autenticavel {
+    public class Diretor : FuncionarioAutenticavel {
 
         public Diretor(string cpf) : base(8000, cpf) { }
 
@@ -17,6 +17,5 @@ namespace BitBank.Funcionarios {
         public override void AumentarSalario() {
             Salario *= 1.15;
         }
-
     }
 }

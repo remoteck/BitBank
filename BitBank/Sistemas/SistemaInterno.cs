@@ -13,7 +13,7 @@ namespace BitBank.Sistemas {
             bool usuarioAutenticado = funcionario.Autenticar(senha);
 
             if (usuarioAutenticado) { 
-                Console.WriteLine($"Bem-vindo ao sistema! {funcionario.Nome}");
+                Console.WriteLine($"Bem-vindo ao sistema!");
                 return true;
             }
             else {

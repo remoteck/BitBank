@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BitBank.Funcionarios {
-    public class GerenteContas : Autenticavel {
+    public class GerenteContas : FuncionarioAutenticavel {
         public GerenteContas(string cpf) : base(5000, cpf) { }
 
         public override double GetBonificacao() {
