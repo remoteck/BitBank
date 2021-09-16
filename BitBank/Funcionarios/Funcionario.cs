@@ -12,9 +12,8 @@ namespace BitBank.Funcionarios {
         public double Salario { get; protected set; }
 
 
-        public virtual double GetBonificacao() {
-            return Salario * 0.10;
-        }
+        public abstract double GetBonificacao();
+        public abstract void AumentarSalario();
 
         public static int TotalDeFuncionarios { get; private set; }
 
@@ -22,10 +21,6 @@ namespace BitBank.Funcionarios {
             CPF = cpf;
             Salario = salario;
             TotalDeFuncionarios++;
-        }
-
-        public virtual void AumentarSalario() {
-            Salario *= 1.1;
         }
 
     }
