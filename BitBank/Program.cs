@@ -9,37 +9,33 @@ namespace BitBank {
     class Program {
         static void Main(string[] args) {
 
-            Diretor gui = new Diretor(8500, "44946664831") {
-                Nome = "Guilherme"
-            };
-
-            Funcionario leo = new Funcionario(1500, "8196816851") {
-                Nome = "Leona"
-            };
-
-            Funcionario mari = gui;
-
-            Console.WriteLine($"Nome do Diretor: {gui.Nome}");
-            Console.WriteLine($"Nome do Funcionário: {leo.Nome}\n");
-
-            Console.WriteLine($"Bonificação de uma referência Diretor: {gui.GetBonificacao()}");
-            Console.WriteLine($"Bonificação de uma referência Funcionário: {leo.GetBonificacao()}\n");
-
-            Console.WriteLine($"Salário Funcionário: R${leo.Salario}");
-            Console.WriteLine($"Salário Diretor: R${gui.Salario}\n");
-
-            Console.WriteLine($"Referência de Leona: {leo.GetType()}");
-            Console.WriteLine($"Referência de Guilherme: {gui.GetType()}\n");
-
-            Console.WriteLine($"Quantidade de Funcionários: {Funcionario.TotalDeFuncionarios}\n");
-            //Só aparecem 2 funcionários por que 'mari' está usando a mesma referência que 'gui'.
-
-            gui.AumentarSalario();
-            leo.AumentarSalario();
-            Console.WriteLine($"Novo salário do Funcionário: R${leo.Salario}");
-            Console.WriteLine($"Novo salário do Diretor: R${gui.Salario}");
-
+            CalculaBonificacao();
+            
             Console.ReadLine();
+        }
+
+        public static void CalculaBonificacao() {
+            GerenciadorBonificacao gerenciadorBonificacao = new GerenciadorBonificacao();
+            
+            Designer pedro = new Designer("833.222.048-39");
+            pedro.Nome = "Pedro";
+
+            Diretor roberta = new Diretor("159.753.398-04");
+            roberta.Nome = "Roberta";
+
+            Auxiliar igor = new Auxiliar("981.198.778-53");
+            igor.Nome = "Igor";
+
+            GerenteContas camila = new GerenteContas("326.985.628-89");
+            camila.Nome = "Camila";
+
+            gerenciadorBonificacao.Registrar(camila);
+            gerenciadorBonificacao.Registrar(pedro);
+            gerenciadorBonificacao.Registrar(igor);
+            gerenciadorBonificacao.Registrar(roberta);
+
+            Console.WriteLine($"Total de bonificações do mês: R${gerenciadorBonificacao.GetTotalBonificacao()}");
+
         }
     }
 }

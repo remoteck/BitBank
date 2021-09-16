@@ -5,17 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BitBank.Funcionarios {
-    public class Diretor : Funcionario {
+    public class Auxiliar : Funcionario {
 
-        public Diretor(string cpf) : base(8000, cpf) { }
+        public Auxiliar(string cpf) : base(1500, cpf) { }
 
         public override double GetBonificacao() {
-            return Salario * 0.5;
+            return Salario * 0.2;
         }
 
         public override void AumentarSalario() {
-            Salario *= 1.15;
+            Salario *= 1.10;
         }
-
     }
 }

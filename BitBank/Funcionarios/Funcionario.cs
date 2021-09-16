@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BitBank.Funcionarios {
-    public class Funcionario {
+    public abstract class Funcionario {
 
         public string Nome { get; set; }
         public string CPF { get; private set; }
