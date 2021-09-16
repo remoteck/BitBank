@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BitBank.Funcionarios {
-    public abstract class FuncionarioAutenticavel : Funcionario, Autenticavel {
+    public abstract class FuncionarioAutenticavel : Funcionario, IAutenticavel {
 
         public string Senha { get; set; }
 

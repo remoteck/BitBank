@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BitBank.Sistemas {
-    public interface Autenticavel {
+    public interface IAutenticavel {
         bool Autenticar(string senha);
 
     }
