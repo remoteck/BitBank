@@ -1,11 +1,12 @@
-﻿using System;
+﻿using BitBank.Sistemas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BitBank.Funcionarios {
-    public class Diretor : Funcionario {
+    public class Diretor : Autenticavel {
 
         public Diretor(string cpf) : base(8000, cpf) { }
 
